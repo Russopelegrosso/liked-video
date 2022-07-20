@@ -13,7 +13,7 @@ class UrlRequest(BaseModel):
 @app.post("/ifttt")
 async def root(request: UrlRequest):
     # Download by youtube-dl
-    path_to_folder = '/home/russo/Загрузки/'
+    path_to_folder = '/path/to/folder/'
     url = request.url
     os.system(f'youtube-dl -o {path_to_folder}"%(title)s.%(ext)s" {url}')
     print('ready============')
